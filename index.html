@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>collective/vision</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="stylesheet" href="ie.css" type="text/css" />
+<!-- <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:400,100,300' rel='stylesheet' type='text/css'> -->
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+</head>
+<body>
+
+<div id="main">
+
+	<div id="holder">
+
+		<canvas id="drawCanvas" width="600" height="600">
+			<p>Sorry, it's not going to work for you</p>
+		</canvas>
+
+		<div id="info">
+			<h1>collective/vision</h1>
+			<h3>enter a subject below to start</h3>
+			<img src="assets/images/arrowDown.png" alt="look down">
+		</div>
+
+	</div>
+
+	<form id="search">
+		<img src="assets/images/logo.png" alt="Collective Vision Logo">
+		<input placeholder="subject" name="term" type="text">
+		<input type="submit" value="">
+
+		<p id="count"></p>
+	
+	</form>
+
+
+	<footer>
+		<a href="http://redweb.com">
+			<img src="assets/images/redweb.png" alt="Redweb Logo">	
+		</a>
+		<a href="http://labs.redweb.com/projects/collective-vision" id="labs">
+			<img src="assets/images/labs.png" alt="Redweb Labs Logo">
+		</a>
+	</footer>
+
+	<canvas id="prepareCanvas" width="600" height="600" hidden class="hidden">
+		<p>Sorry, same as before</p>
+	</canvas>
+
+</div>
+
+<script src="scripts/libraries/jquery.js"></script>
+<script src="scripts/core.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{
+	-webkit-transform: translateZ(0);
+	/*-webkit-perspective: 1000;*/
+	/*-webkit-backface-visibility: hidden;*/
+}
+
+html{
+	height:100%;
+	width:100%;
+	background-color:white;
+	background-position:center 0px;
+	background-size:100%;
+
+}
+
+body{
+	font-family: 'AvantGarde Bk BT', Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	font-size:12pt;
+	margin:0px;
+	background-attachment: scroll;
+	background-repeat: repeat-y;
+	width:100%;
+	height:100%;
+	color: rgba(0,0,0,.4);
+	letter-spacing: 2px;
+}
+
+#main{
+	width:450px;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+}
+
+#holder{
+	margin-top: 75px;
+	width: 450px;
+	height: 450px;
+	background: #f0f0ee;
+	overflow: hidden;
+	float: left;
+}
+
+#drawCanvas{
+	float: left;
+	width: 450px;
+	height: 450px;
+}
+
+#info{
+	position: absolute;
+	width: 450px;
+	height: 450px;
+	text-align: center;
+}
+
+#info h1{
+	font-size: 53px;
+	font-weight: 100;
+	color: #FFF;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	line-height: 0.7em;
+	margin-top: 160px;
+	letter-spacing: 5px;
+}
+
+#info h3 {
+	color: #C8C8C8;
+	font-weight: 300;
+	margin-bottom: 5px;
+}
+
+#info img{
+	float: left;
+	margin-left: 73px;
+}
+
+form#search{
+	width: auto;
+	float: left;
+	text-align: center;
+	margin-top: 40px;
+	color: #bebeba;
+}
+
+input[name="term"]{
+	/*border:1px solid rgba(255,255,255,1);*/
+	background-color: white;
+	border: 2px solid #f0f0f0;
+	font-size: 18px;
+	width: 295px;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	color: rgba(0,0,0,.6);
+	margin-top: 15px;
+	color: #bebeba;
+	letter-spacing: 2px;
+}
+
+input[type="submit"]{
+	background-image: url('assets/images/arrow.png');
+	border: 1px solid transparent;
+	padding: 3px 5px 5px;
+	position: absolute;
+	color: rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+	margin-left: -23px;
+	margin-top: 17px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+/*input.empty, input:focus{
+	border: 1px solid rgba(0,0,0,.1);
+}*/
+
+button#stopLayering{
+	background-color: rgba(246, 212, 212, 1);
+	border: 1px solid transparent;
+	padding: 3px 5px 5px;
+	position: relative;
+	color: rgba(0, 0, 0, 0.4);
+	margin-top: 10px;
+	overflow: hidden;
+	width: 42px;
+	margin-left: 0;
+	
+	-webkit-transition:margin-left 1s; /* For Safari 3.1 to 6.0 */
+	transition: margin-left 1s;
+}
+
+.hidden{
+	display: none;
+}
+
+footer{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	border-top: solid 1px #f0f0ee;
+	height: 35px;
+	padding-top: 15px;
+	float: left;
+}
+
+footer #labs{
+	float: right;
+	display: block;
+}
+
+#count{
+	float: left;
+	margin-top: 9px;
+	margin-right: 15px;
+	font-size: 14px;
+	margin-left: 85px;
+	text-align: left;
+	width: 50%;
+	font-weight: 800;
+	letter-spacing: 1px;
+	/*display: none;*/
+	color: #ececec;
+}
+
+@media all and (max-width: 800px){
+
+	#main{
+		width: 300px;
+		float: none;
+		height: auto;
+	}
+
+	#holder, #drawCanvas, #info{
+		width: 300px;
+		height: 300px;
+	}
+
+	#holder{
+		margin-top: 10px;
+		float: none;
+	}
+
+	#holder #info h1, #holder #info h3{
+		word-break: keep-all;
+	}
+
+	#holder #info h1{
+		font-size: 28px;
+		margin-top: 125px;
+	}
+
+	#holder #info h3{
+		font-size: 12px;
+	}
+
+	#holder #info img{
+		margin-left: 41px;
+		width: 10px;
+	}
+
+	form#search{
+		margin-top: 20px;
+		float: none;
+		/*padding-bottom: 50px;*/
+	}
+
+	form#search img{
+		width: 80%;
+		height: auto;
+
+	}
+
+	form#search input[name="term"]{
+		width: 235px;	
+	}
+
+	form#search p#count{
+		margin-left: 37px;
+		float: none;
+		min-height: 30px;
+	}
+
+	footer{
+		float: none;
+		bottom: auto;
+		top: 100%;
+	}
+
+}
+
+@media all and (max-width: 800px) and (min-height: 500px){
+
+	div#main{
+		height: 100%;
+	}
+
+	footer{
+		position: absolute;
+		top: auto;
+		bottom: 0;
+		/*left: 0;*/
+		padding: 15px 2% 0;
+		width: 96%;
+	}
+
+}
